@@ -1,10 +1,13 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createWSClient, httpBatchLink, splitLink, wsLink } from "@trpc/client";
 import { trpc } from "./utils/trpc";
 import Welcome from "./components/Welcome";
 import "./App.css";
 import RandomNumber from "./components/RandomNumber";
+import superjson from "superjson";
+import LastPost from "./components/LastPost";
+import CreatePost from "./components/CreatePost";
 
 function App() {
   const [queryClient] = useState(() => new QueryClient());
@@ -12,6 +15,7 @@ function App() {
   const [trpcClient] = useState(() => {
     const wsClient = createWSClient({ url: "ws://localhost:4000/trpc" });
     return trpc.createClient({
+      transformer: superjson,
       links: [
         splitLink({
           condition: (op) => op.type === "subscription",
@@ -51,6 +55,12 @@ function App() {
           </div>
           <div className="card">
             <RandomNumber />
+          </div>
+          <div className="card">
+            <CreatePost />
+          </div>
+          <div className="card">
+            <LastPost />
           </div>
         </div>
       </QueryClientProvider>

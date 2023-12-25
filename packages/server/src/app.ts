@@ -1,7 +1,7 @@
 import { fastifyTRPCPlugin } from "@trpc/server/adapters/fastify";
 import fastify from "fastify";
-import { createContext } from "./context";
-import { appRouter } from "./router";
+import { createContext } from "./context.ts";
+import { appRouter } from "./router.ts";
 import cors from "@fastify/cors";
 import ws from "@fastify/websocket";
 

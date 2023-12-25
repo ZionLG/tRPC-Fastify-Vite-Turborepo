@@ -2,24 +2,27 @@
   "name": "@trpc-react/server",
   "version": "1.0.0",
   "main": "src/router",
+  "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "tsnd --respawn --transpile-only src/app.ts",
+    "dev": "tsx src/app.ts",
     "build": "tsc",
     "start": "node dist/app.js"
   },
   "dependencies": {
     "@fastify/cors": "^8.5.0",
     "@fastify/websocket": "^8.3.0",
+    "@trpc-react/db": "1.0.0",
     "@trpc/server": "^10.44.1",
     "@types/cors": "^2.8.17",
     "fastify": "^4.25.2",
+    "superjson": "^2.2.1",
+    "tsx": "^4.7.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20.10.5",
     "ts-node": "^10.9.2",
-    "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"
   }
 }

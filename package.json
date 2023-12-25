@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "private": true,
   "packageManager": "pnpm@8.6.7",
   "workspaces": [
@@ -10,7 +11,10 @@
   ],
   "scripts": {
     "dev": "turbo run dev",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "db:generate": "turbo db:generate",
+    "db:push": "turbo db:push db:generate",
+    "db:studio": "pnpm -F db dev"
   },
   "devDependencies": {
     "turbo": "^1.11.2"

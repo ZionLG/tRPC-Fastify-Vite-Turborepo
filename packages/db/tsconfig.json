@@ -1,0 +1,13 @@
+{
+  "include": ["index.ts"],
+  
+  "compilerOptions": {
+    "module": "NodeNext",
+    "esModuleInterop": true ,
+    "forceConsistentCasingInFileNames": true ,
+    "strict": true ,
+    "target": "es2022",
+    "strictNullChecks": true,      
+  }
+ 
+}

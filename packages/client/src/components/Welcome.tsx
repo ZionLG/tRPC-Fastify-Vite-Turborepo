@@ -1,11 +1,11 @@
-import { trpc } from "../../utils/trpc";
+import { trpc } from "../utils/trpc";
 
 type WelcomeProps = {
   name: string;
 };
 
 const Welcome = ({ name }: WelcomeProps) => {
-  const { data, isLoading } = trpc.greeting.useQuery({ name });
+  const { data, isLoading } = trpc.test.greeting.useQuery({ name });
 
   return isLoading ? (
     <p>Loading...</p>
