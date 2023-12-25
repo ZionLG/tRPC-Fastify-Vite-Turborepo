@@ -1,4 +1,4 @@
-# Fastify + Websockets + tRPC + React (with Vite) + Turborepo (pnpm)
+# Fastify (with Websockets) + tRPC + React (Vite) + Turborepo (pnpm)
 
 A minimal monorepo with Fastifyjs and React with tRPC support.
 
