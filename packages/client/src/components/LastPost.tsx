@@ -1,9 +1,9 @@
 import { trpc } from "../utils/trpc";
 
 const LastPost = () => {
-  const { data, isLoading } = trpc.post.getLatest.useQuery();
+  const { data, isPending } = trpc.post.getLatest.useQuery();
 
-  return isLoading ? (
+  return isPending ? (
     <p>Loading...</p>
   ) : (
     <p>

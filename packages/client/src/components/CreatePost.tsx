@@ -3,7 +3,7 @@ import { trpc } from "../utils/trpc";
 
 const CreatePost = () => {
   const [title, setTitle] = useState<string>("");
-  const { mutate, isLoading } = trpc.post.create.useMutation();
+  const { mutate, isPending } = trpc.post.create.useMutation();
   return (
     <form>
       <input
@@ -15,7 +15,7 @@ const CreatePost = () => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <button
-        disabled={isLoading}
+        disabled={isPending}
         onClick={() => {
           mutate({ title: title });
         }}

@@ -8,6 +8,7 @@ import RandomNumber from "./components/RandomNumber";
 import superjson from "superjson";
 import LastPost from "./components/LastPost";
 import CreatePost from "./components/CreatePost";
+import { Button } from "./components/ui/button";
 
 function App() {
   const [queryClient] = useState(() => new QueryClient());
@@ -50,6 +51,7 @@ function App() {
             </a>
           </div>
           <h1>tRPC + React</h1>
+          <Button>Test</Button>
           <div className="card">
             <Welcome name="Liran" />
           </div>

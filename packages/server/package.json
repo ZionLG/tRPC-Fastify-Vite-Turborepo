@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@fastify/cors": "^8.5.0",
-    "@fastify/websocket": "^8.3.0",
+    "@fastify/websocket": "^8.3.1",
     "@trpc-react/db": "1.0.0",
-    "@trpc/server": "^10.44.1",
+    "@trpc/server": "next",
     "@types/cors": "^2.8.17",
     "fastify": "^4.25.2",
     "superjson": "^2.2.1",

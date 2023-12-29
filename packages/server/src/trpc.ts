@@ -1,5 +1,5 @@
 import { initTRPC } from "@trpc/server";
-import { createContext } from "./context";
+import { createContext } from "./context.ts";
 import superjson from "superjson";
 import { ZodError } from "zod";
 

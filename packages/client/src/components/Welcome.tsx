@@ -5,9 +5,9 @@ type WelcomeProps = {
 };
 
 const Welcome = ({ name }: WelcomeProps) => {
-  const { data, isLoading } = trpc.test.greeting.useQuery({ name });
+  const { data, isPending } = trpc.test.greeting.useQuery({ name });
 
-  return isLoading ? (
+  return isPending ? (
     <p>Loading...</p>
   ) : (
     <p>
